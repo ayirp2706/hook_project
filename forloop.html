@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java.js"></script>
+</head>
+<body>
+   <!-- <img src="one.gif" alt="gif image"  id="halik">-->
+<select id="change" onchange="myLoop()">
+    <option></option>
+ <option value="123">5</option>
+ <option value="321">6</option>
+</select>
+
+ <p id ="result"></p>
+
+
+</body>
+<!-- <script>
+    function myLoop(){
+       var change= document.getElementById('change').value;
+        if (change==123)
+    {
+       var img=" ";
+     for(var i=0;i<5;i++)
+     {
+           img += " <img src = digital.jpg> " ;
+       //  const image = document.getElementById("halik");
+     }
+        document.getElementById('result').innerHTML=img;
+
+    }
+    else{
+    
+       var img1=" ";
+       var i=0;
+     while( i<10){
+           img1 += " <img src = digital.jpg> " ;
+       //  const image = document.getElementById("halik");
+       i++;
+     }
+        document.getElementById('result').innerHTML=img1;
+
+    }}
+</script>-->
+<html>
+<body>
+   <h3>Finding the largest number contained in a JavaScript array</h3>
+   <p>The Dummy array is: [5, 10, 20, 3, 98, 95]</p>
+   <p id="result"></p>
+   <script>
+      let arr = [5, 10, 20, 3, 98, 95];
+      let largest = arr[0];
+      function largestNumber() {
+         for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > largest)
+            largest = arr[i];
+         }
+         document.getElementById('result').innerHTML = "The largest element of the array is: " + largest;
+      }
+      largestNumber();
+   </script>
+</body>
+</html>
+</html> 

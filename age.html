@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Age Calculator</h1>
+    Enter your birthdate:<input type="date" id="birthdate">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <pre><h3>Your age is:</h3><p id="result"></p></pre>
+
+</body>
+<script>
+     var date = new Date();
+    var year = date.getFullYear();
+    var month = 1 + date.getMonth();
+    var day = date.getDay();
+    var currentDate = year + '/' + month + '/' + day
+    console.log(currentDate);
+
+    function calculateAge() {
+            let birthdateInput = document.getElementById('birthdate');
+            let birthdate = new Date(birthdateInput.value);
+            let currentDate = new Date();
+    
+            let ageInMilliseconds = currentDate - birthdate;
+            let ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+            let roundedAge = Math.floor(ageInYears);
+            let resultElement = document.getElementById('result');
+            resultElement.textContent = `You are approximately ${roundedAge} years old.`;
+        }   
+       </script>
+</html>

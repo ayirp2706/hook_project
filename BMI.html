@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    .bmiclc{
+        height:350px;
+        width:400px;
+        background-color: aquamarine;
+        padding:20px;
+        padding-left: 80px;
+    }
+    input{
+        padding:10px;
+        margin:10px 50px;
+    }
+    button{
+        margin-left:90px;
+        margin-top: 10px;
+        padding:10px;
+    }
+    p{
+        margin-left:80px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="bmiclc">
+        <h1>BMI CALCULATOR</h1>
+    <input type="number" id="weight" placeholder="enter the weight"> <br>
+    <input type="number" id="height" placeholder="enter the height in cm"> <br>
+    <button onclick =" bmi() ">calculate</button>
+    <p id ="result"></p>
+    <p id ="result1"></p>
+</div>
+</body>
+<script>
+ function bmi(){
+     var height=document.getElementById('height').value;
+    var  height1=height/100;
+     var weight= document.getElementById('weight').value;
+     var result  = weight/(height1*height1);
+     console.log(result);
+     document.getElementById('result1').innerHTML =  result;
+     if (result < 18.5){
+         console.log("under weight");
+         
+         document.getElementById('result').innerHTML="under weight";
+     }
+     else if ((result>=18.5)&&(result<=24.9)){
+         console.log("normal");
+        
+     document.getElementById('result').innerHTML="normal";
+     }
+     else if((result>=25)&&(result<=29.9)){
+     console.log("overweight");
+     
+
+ document.getElementById('result').innerHTML="over weight";
+     }
+     else{
+         console.log("obesity");
+         
+     document.getElementById('result').innerHTML="obesity";
+     }
+     }
+
+</script>
+</html>

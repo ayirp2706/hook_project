@@ -1,0 +1,71 @@
+/* App.css
+.game {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: center; */
+ /* margin: 20px auto;
+  width: 300px;*/
+
+/* }
+.game-board {
+  flex-grow: flex;
+  flex-direction: row;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+}
+
+.board-row {
+  display: wrap;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  font-size: 24px;
+  padding: 24px;
+  text-align: center;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+.game-board.square:last-child{
+  margin-right: 0;
+}
+.square:hover {
+  background: #ddd;
+} */ 
+/* App.css */
+
+.game {
+  display: flex;
+  justify-content: center; /* Center the game horizontally */
+  margin: 20px auto;
+  width: 300px;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: row; /* Arrange squares in a row */
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  font-size: 24px;
+  padding: 24px;
+  text-align: center;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.square:hover {
+  background: #ddd;
+}
+
+/* Add styles for the last square of each row */
+.game-board .square:last-child {
+  margin-right: 0;
+}
